@@ -6,7 +6,8 @@ function TodoList (props) {
       <section className = 'container' >
         {props.loading && props.onLoading()}
         {props.error && props.onError()}
-        {(!props.loading && !props.searchedTodos.length) && props.onEmptyTodos()}
+        {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
+        {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptyResultTodos(props.searchText)}
 
         <ul className = 'list'>
           {props.searchedTodos.map(props.render)}

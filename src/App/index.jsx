@@ -10,6 +10,7 @@ import { TodoList } from '../TodoList';
 import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
+import { EmptyResultTodos } from '../EmptyResultTodos';
 import { TodoItem } from '../TodoItem';
 
 import { CreateTodoButton } from '../CreateTodoButton';
@@ -55,10 +56,17 @@ function App() {
       <TodoList
         loading={loading}
         error={error}
+        totalTodos = {totalTodos}
         searchedTodos={searchedTodos}
+        searchText = {searchValue}
         onLoading={() => <TodosLoading />}
         onError={() => <TodosError />}
         onEmptyTodos={() => <EmptyTodos />}
+        onEmptyResultTodos={(searchText) => 
+        <EmptyResultTodos
+          searchText = {searchText}
+        />}
+
         render={todo => (
           <TodoItem
             key={todo.text}
@@ -69,22 +77,6 @@ function App() {
           />
         )}
       />
-
-      {/* <TodoList>
-        {loading && <TodosLoading />}
-        {error && <TodosError />}
-        {(!loading && searchedTodos.length === 0) && <EmptyTodos loading={loading} />}
-
-        {searchedTodos.map(todo => (
-          <TodoItem 
-            key={todo.text} 
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
-      </TodoList> */}
 
       <CreateTodoButton 
         setOpenModal = {setOpenModal}

@@ -1,13 +1,10 @@
 import React from "react";
 import './EmptyTodos.scss'
 
-function EmptyTodos({loading}) {
+function EmptyTodos() {
 
-    //   console.log(loading);
-    return ( loading ? 
+    return (
         <p>Crea tu primera Tarea...</p>
-        :
-        <p>No se encuentra Nada!</p>
     );
 }
 
