@@ -1,7 +1,7 @@
 {
   "name": "vite-list",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,16 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngDonovan/todo-viteReactSass.git"
+  },
+  "author": "Ing Donovan <rojasdrm03@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IngDonovan/todo-viteReactSass/issues"
+  },
+  "homepage": "https://github.com/IngDonovan/todo-viteReactSass",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
