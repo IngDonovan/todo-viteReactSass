@@ -1,0 +1,21 @@
+.TodoItem {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    background: #e0e0e0;
+    box-shadow:  -8px -8px 16px #bebebe,
+                 8px 8px 16px #ffffff;
+}
+
+.TodoItem label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 70px);
+    cursor: pointer;
+}
