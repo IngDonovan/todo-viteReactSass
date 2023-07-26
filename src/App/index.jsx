@@ -75,8 +75,18 @@ function App() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        )}
-      />
+        )}//render Props
+      >
+        {/* {todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        )}//render functions */}
+      </TodoList>
 
       <CreateTodoButton 
         setOpenModal = {setOpenModal}
