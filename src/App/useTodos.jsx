@@ -15,7 +15,7 @@ function useTodos() {
   const [openModal, setOpenModal] = React.useState(false);
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length; //doble negación para convertirlo si o si a boolean
-  console.log(completedTodos); // acá va bien cuenta los completados----------------
+//   console.log(completedTodos); // acá va bien cuenta los completados----------------
   const totalTodos = todos.length;
 
   const searchedTodos = todos.filter((todo) => {
