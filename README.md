@@ -1,6 +1,6 @@
 # Todo-Vite-React-Sass
 
-`<link>` : <https://ingdonovan.github.io//>
+`<link>` : <https://ingdonovan.github.io/todo-viteReactSass/>
 
 ## Description
 
@@ -22,13 +22,13 @@ This is new copy about The last proyect of Todo-list and new implementation usin
 ## Preview
 Below is a preview of the Landing Page:
 
-`<link>` : <https://ingdonovan.github.io//>
+`<link>` : <https://ingdonovan.github.io/todo-viteReactSass/>
 
 ## Installation and Usage
 Clone this repository:
 
 ```bash
-git clone https://github.com/IngDonovan/
+git clone https://github.com/IngDonovan/todo-viteReactSass.git
 ```
 
 1. Open the index.html file in your browser to view the .
