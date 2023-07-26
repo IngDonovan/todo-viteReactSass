@@ -6,6 +6,9 @@ import { TodoTitle } from '../TodoTitle';
 import { TodoSearch } from '../TodoSearch';
 import { TodoCounter } from '../TodoCounter';
 
+import { TodoList } from '../TodoList';
+import { TodosLoading } from '../TodosLoading';
+
 import './App.css'
 
 function App() {
@@ -31,6 +34,10 @@ function App() {
         totalTodos = {totalTodos}
        />  
       </TodoHeader>
+
+      <TodoList>
+        {loading && <TodosLoading />}
+      </TodoList>
     </>
   )
 }
