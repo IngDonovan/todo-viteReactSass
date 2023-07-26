@@ -1,10 +1,16 @@
-import './TodoList.scss'
+import React from 'react';
+import './TodoList.scss';
 
-function TodoList ({children}) {
+function TodoList (props) {
     return(
       <section className = 'container' >
+        {props.loading && props.onLoading()}
+        {props.error && props.onError()}
+        {(!props.loading && !props.searchedTodos.length) && props.onEmptyTodos()}
+
         <ul className = 'list'>
-          {children}
+          {props.searchedTodos.map(props.render)}
+          {/* {children} */}
         </ul>
       </section>
     );
