@@ -1,10 +1,9 @@
 import React from 'react';
 
-function TodoHeader() {
+function TodoHeader({children}) {
   return (
     <header>
-      {/* {children} */}
-      <h1>header</h1>
+      {children}
     </header>
   );
 }
