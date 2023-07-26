@@ -12,6 +12,12 @@ import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { TodoItem } from '../TodoItem';
 
+import { CreateTodoButton } from '../CreateTodoButton';
+
+import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
+
+
 import './App.css'
 
 function App() {
@@ -26,6 +32,10 @@ function App() {
     searchedTodos,
     completeTodo,
     deleteTodo,
+    setOpenModal,
+    openModal,
+    addTodo,
+    
   } = useTodos();
   return (
     <>
@@ -57,6 +67,20 @@ function App() {
           />
         ))}
       </TodoList>
+
+      <CreateTodoButton 
+        setOpenModal = {setOpenModal}
+      />
+
+      {openModal && (
+        <Modal>
+          <TodoForm 
+            addTodo = {addTodo}
+            setOpenModal = {setOpenModal}
+          />
+          
+        </Modal>
+      )}
     </>
   )
 }

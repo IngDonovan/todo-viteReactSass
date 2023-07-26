@@ -1,0 +1,32 @@
+
+.addTask {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(315deg, #f0f0f0, #cacaca);
+    box-shadow:  -8px -8px 16px #bebebe,
+             8px 8px 16px #ffffff;
+    /* z-index: 1; */
+    transform: rotate(0);
+    transition: .3s ease-in;
+}
+
+.addTask:hover{
+    transform: rotate(270deg);
+}
+
+.addTask:hover path{
+    stroke: rgb(0, 119, 255);
+}
+
+.addTask:active{
+    background: #e0e0e0;
+    box-shadow: inset  -8px -8px 16px #bebebe,
+    inset 8px 8px 16px #ffffff;
+    
+} 
