@@ -8,6 +8,7 @@ import { TodoCounter } from '../TodoCounter';
 
 import { TodoList } from '../TodoList';
 import { TodosLoading } from '../TodosLoading';
+import { TodosError } from '../TodosError';
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
     loading,
     completedTodos,
     totalTodos,
+    error,
   } = useTodos();
   return (
     <>
@@ -37,6 +39,7 @@ function App() {
 
       <TodoList>
         {loading && <TodosLoading />}
+        {error && <TodosError />}
       </TodoList>
     </>
   )
