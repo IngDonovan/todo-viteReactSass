@@ -1,0 +1,37 @@
+
+.Icon {
+    position: absolute;
+}
+
+.Icon-check {
+    left: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.TodoItem-p{
+    cursor:pointer;
+}
+
+.TodoItem-p--complete {
+    color: #A5A5A5;
+    text-decoration: line-through;
+  }
+
+.Icon-delete {
+    right: 10px;
+    cursor: pointer;  
+}
+
+.Icon-svg{
+    height: 20px;
+    width: 20px;
+}
+
+.Icon-delete:hover .Icon-svg path{
+    stroke: red;
+  }
+
+.Icon-check:hover .Icon-svg{
+    fill: rgb(0, 119, 255);
+  }

@@ -9,6 +9,8 @@ import { TodoCounter } from '../TodoCounter';
 import { TodoList } from '../TodoList';
 import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
+import { EmptyTodos } from '../EmptyTodos';
+import { TodoItem } from '../TodoItem';
 
 import './App.css'
 
@@ -21,6 +23,9 @@ function App() {
     completedTodos,
     totalTodos,
     error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
   } = useTodos();
   return (
     <>
@@ -34,12 +39,23 @@ function App() {
         loading = {loading}
         completedTodos = {completedTodos}
         totalTodos = {totalTodos}
-       />  
+       />
       </TodoHeader>
 
       <TodoList>
         {loading && <TodosLoading />}
         {error && <TodosError />}
+        {(!loading && searchedTodos.length === 0) && <EmptyTodos loading={loading} />}
+
+        {searchedTodos.map(todo => (
+          <TodoItem 
+            key={todo.text} 
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        ))}
       </TodoList>
     </>
   )
