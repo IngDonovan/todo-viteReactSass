@@ -43,6 +43,7 @@ function App() {
       <TodoHeader>
        <TodoTitle />
        <TodoSearch 
+        loading = {loading}
         searchValue = {searchValue}
         setSearchValue = {setSearchValue}
        />

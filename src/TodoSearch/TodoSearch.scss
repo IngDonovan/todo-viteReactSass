@@ -35,6 +35,10 @@
   outline-color: rgb(0, 119, 255);
 }
 
+.cont input:disabled {
+  opacity: 25%;
+}
+
 .cont-box svg{
     position: absolute;
     right: 10px;

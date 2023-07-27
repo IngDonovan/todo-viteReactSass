@@ -1,7 +1,9 @@
 import React from 'react';
 import './TodoSearch.scss'
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch({ loading, searchValue, setSearchValue }) {
+
+
   return (
     <div className="cont">
       <section className="cont-box">
@@ -11,6 +13,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
           onChange={(event) => {
             setSearchValue(event.target.value);
           }}
+          disabled={loading}
         />
         <svg
           width="24"
