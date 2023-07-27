@@ -40,15 +40,16 @@ function App() {
   } = useTodos();
   return (
     <>
-      <TodoHeader>
-       <TodoTitle />
-       <TodoSearch 
+      <TodoHeader
+        loading = {loading}>
+       {/* <TodoTitle /> */}
+       {/* <TodoSearch 
         loading = {loading}
         searchValue = {searchValue}
         setSearchValue = {setSearchValue}
-       />
+       /> */}
        <TodoCounter 
-        loading = {loading}
+        
         completedTodos = {completedTodos}
         totalTodos = {totalTodos}
        />
