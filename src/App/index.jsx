@@ -42,12 +42,12 @@ function App() {
     <>
       <TodoHeader
         loading = {loading}>
-       {/* <TodoTitle /> */}
-       {/* <TodoSearch 
+       <TodoTitle />
+       <TodoSearch 
         loading = {loading}
         searchValue = {searchValue}
         setSearchValue = {setSearchValue}
-       /> */}
+       />
        <TodoCounter 
         
         completedTodos = {completedTodos}
