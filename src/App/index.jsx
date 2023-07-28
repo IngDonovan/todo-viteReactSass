@@ -68,7 +68,6 @@ function App() {
         <EmptyResultTodos
           searchText = {searchText}
         />}
-
         render={todo => (
           <TodoItem
             key={todo.text}
@@ -100,7 +99,6 @@ function App() {
             addTodo = {addTodo}
             setOpenModal = {setOpenModal}
           />
-          
         </Modal>
       )}
     </>
