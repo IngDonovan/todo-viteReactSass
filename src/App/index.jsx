@@ -65,9 +65,9 @@ function App() {
         onError={() => <TodosError />}
         onEmptyTodos={() => <EmptyTodos />}
         onEmptyResultTodos={(searchText) => 
-        <EmptyResultTodos
-          searchText = {searchText}
-        />}
+          <EmptyResultTodos
+            searchText = {searchText}
+          />}
         render={todo => (
           <TodoItem
             key={todo.text}
