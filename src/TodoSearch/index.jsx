@@ -1,8 +1,13 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoSearch.scss'
 
-function TodoSearch({ loading, searchValue, setSearchValue }) {
-
+function TodoSearch() {
+  const { 
+    loading,
+    searchValue,
+    setSearchValue 
+  } = React.useContext(TodoContext);
 
   return (
     <div className="cont">

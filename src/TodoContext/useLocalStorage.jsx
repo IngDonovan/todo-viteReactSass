@@ -23,7 +23,7 @@ function useLocalStorage(itemName, initialValue) {
         setLoading(false);
         setError(true);
       }
-    }, 2000); //simulacion del tiempo de conexion
+    }, 2000);
   }, []);
 
   const saveItem = (newItem) => {
