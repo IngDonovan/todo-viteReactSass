@@ -1,14 +1,14 @@
 import React from 'react';
 import './TodoCounter.scss';
-import { TodoContext } from '../TodoContext';
+// import { TodoContext } from '../TodoContext';
 
-function TodoCounter() {
+function TodoCounter({ loading, completedTodos,totalTodos}) {
 
-  const { 
-    loading, 
-    completedTodos,
-    totalTodos,
-  } = React.useContext(TodoContext);
+  // const { 
+  //   loading, 
+  //   completedTodos,
+  //   totalTodos,
+  // } = React.useContext(TodoContext);
 
   if (!loading) {
     if (totalTodos === 0) {
