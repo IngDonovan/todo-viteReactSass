@@ -1,10 +1,11 @@
 import React from "react";
 import { withStorageListener } from "./withStorageListener";
+import './ChangeAlert.scss';
 
 function ChangeAlert({ show, toggleShow }) {
     if (show) {
         return (
-            <div>
+            <div className="alertSync">
                 <p>Actualiza porque hubo cambios!</p>
                 <button
                     onClick={() => toggleShow(false)}
