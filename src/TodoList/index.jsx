@@ -10,9 +10,9 @@ function TodoList (props) {
       {props.error && props.onError()}
       {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
       {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptyResultTodos(props.searchText)}
-
+      {/* // {!props.loading && props.searchedTodos.map(renderFunc)} */}
       <ul className = 'list'>
-        {props.searchedTodos.map(renderFunc)}
+        {!props.loading && props.searchedTodos.map(renderFunc)}
         {/* {children} */}
       </ul>
     </section>
