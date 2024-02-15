@@ -19,6 +19,8 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
 
+import { ChangeAlertWithStorageListener } from '../ChangeAlert'; 
+
 
 import './App.css'
 
@@ -46,12 +48,12 @@ function App() {
         loading = {loading}>
        <TodoTitle />
        <TodoSearch 
-        loading = {loading}
+        // loading = {loading}
         searchValue = {searchValue}
         setSearchValue = {setSearchValue}
        />
        <TodoCounter
-        loading = {loading} 
+        // loading = {loading} 
         completedTodos = {completedTodos}
         totalTodos = {totalTodos}
        />
@@ -95,6 +97,9 @@ function App() {
           />
         </Modal>
       )}
+
+        <ChangeAlertWithStorageListener />
+
     </>
   );
 }
