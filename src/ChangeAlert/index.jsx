@@ -4,6 +4,8 @@ import { withStorageListener } from "./withStorageListener";
 function ChangeAlert({ show, toggleShow }) {
     if (show) {
         return <p>Actualiza porque hubo cambios!</p>
+    } else {
+        return null;
     }
 };
 
