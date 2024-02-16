@@ -19,7 +19,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
 
-import { ChangeAlertWithStorageListener } from '../ChangeAlert'; 
+import { ChangeAlert } from '../ChangeAlert'; 
 
 
 import './App.css'
@@ -99,7 +99,7 @@ function App() {
         </Modal>
       )}
 
-        <ChangeAlertWithStorageListener 
+        <ChangeAlert 
           sincronize= {sincronizeTodos}
         />
 
