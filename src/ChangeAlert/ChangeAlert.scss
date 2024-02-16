@@ -1,15 +1,44 @@
 
-.alertSync{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+// .alertSync{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     p{
+//         font-size: 16px;
+//         text-align: center;
+//         margin: 0;
+//         padding: 12px;
+//     }
+
+// }
+
+.alertSync-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1e1e1f50;
+    z-index: 2;
+  }
+  
+  .alertSync-container {
+    position: fixed;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    padding: 34px;
+    background-color: #1e1e1f;
+    color: #f2f4f5;
+    z-index: 2;
+    text-align: center;
+    font-size: 16px;
+    
     p{
-        font-size: 16px;
-        text-align: center;
-        margin: 0;
-        padding: 12px;
+        margin-bottom: 20px;
     }
+    
     button{
         width: 200px;
         height: 50px;
@@ -19,7 +48,6 @@
         font-size: 16px;
         background: rgba(25, 107, 200, 0.575);
         border:none;
-        box-shadow:  -8px -8px 16px #bebebe,
-                     8px 8px 16px #ffffff;
+
     }
-}
+  }

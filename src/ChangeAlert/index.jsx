@@ -5,13 +5,15 @@ import './ChangeAlert.scss';
 function ChangeAlert({ show, toggleShow }) {
     if (show) {
         return (
-            <div className="alertSync">
-                <p>Actualiza porque hubo cambios!</p>
-                <button
-                    onClick={() => toggleShow(false)}
-                >
-                    Refrescar
-                </button>
+            <div className="alertSync-bg">
+                <div className="alertSync-container">
+                    <p>Actualiza porque hubo cambios!</p>
+                    <button
+                        onClick={() => toggleShow(false)}
+                    >
+                        Refrescar
+                    </button>
+                </div>
             </div>
         )
     } else {
