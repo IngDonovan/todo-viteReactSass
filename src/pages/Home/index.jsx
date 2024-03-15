@@ -1,31 +1,29 @@
 import React from 'react';
 
-import { useTodos } from './useTodos';//custom hook
+import { useTodos } from '@hooks/useTodos';//custom hook
 
-import { TodoHeader } from '../TodoHeader';
-import { TodoTitle } from '../TodoTitle';
-import { TodoSearch } from '../TodoSearch';
-import { TodoCounter } from '../TodoCounter';
+import { TodoHeader } from '@components/TodoHeader';
+import { TodoTitle } from '@components/TodoTitle';
+import { TodoSearch } from '@components/TodoSearch';
+import { TodoCounter } from '@components/TodoCounter';
 
-import { TodoList } from '../TodoList';
-import { TodosLoading } from '../TodosLoading';
-import { TodosError } from '../TodosError';
-import { EmptyTodos } from '../EmptyTodos';
-import { EmptyResultTodos } from '../EmptyResultTodos';
-import { TodoItem } from '../TodoItem';
+import { TodoList } from '@components/TodoList';
+import { TodosLoading } from '@components/TodosLoading';
+import { TodosError } from '@components/TodosError';
+import { EmptyTodos } from '@components/EmptyTodos';
+import { EmptyResultTodos } from '@components/EmptyResultTodos';
+import { TodoItem } from '@components/TodoItem';
 
-import { CreateTodoButton } from '../CreateTodoButton';
+import { CreateTodoButton } from '@components/CreateTodoButton';
 
-import { Modal } from '../Modal';
-import { TodoForm } from '../TodoForm';
+import { Modal } from '@components/Modal';
+import { TodoForm } from '@components/TodoForm';
 
-import { ChangeAlert } from '../ChangeAlert'; 
-
-
-import './App.css'
+import { ChangeAlert } from '@components/ChangeAlert'; 
 
 
-function App() {
+
+function Home() {
 
   const {
     searchValue,
@@ -107,4 +105,4 @@ function App() {
   );
 }
 
-export default App;
+export { Home };
