@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@pages/*": ["src/pages/*"],
+        "@routes/*": ["src/routes/*"],
+        // Add more aliases as needed
+      }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }

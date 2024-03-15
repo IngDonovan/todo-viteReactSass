@@ -13,4 +13,13 @@ export default defineConfig({
     }),
   ],
   base: "./",
+  resolve: {
+    alias: {
+      '@components': '/src/components',
+      '@hooks': '/src/hooks',
+      '@pages': '/src/pages',
+      '@routes': '/src/routes',
+      // Add more aliases as needed
+    }
+  }
 });
