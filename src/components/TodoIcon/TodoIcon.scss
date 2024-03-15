@@ -22,6 +22,10 @@
     right: 10px;
     cursor: pointer;  
 }
+.Icon-edit {
+  right: 40px;
+  cursor: pointer;  
+}
 
 .Icon-svg{
     height: 20px;
@@ -33,5 +37,9 @@
   }
 
 .Icon-check:hover .Icon-svg{
+    fill: rgb(0, 119, 255);
+  }
+
+.Icon-edit:hover .Icon-svg{
     fill: rgb(0, 119, 255);
   }
