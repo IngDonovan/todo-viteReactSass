@@ -77,6 +77,7 @@ function Home() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
+            onEdit={() => console.log('Editar Todo')}
             onDelete={() => deleteTodo(todo.text)}
           />
         )}//render Props
