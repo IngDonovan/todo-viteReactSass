@@ -8,7 +8,7 @@ function useTodos() {
     loading,
     error,
     sync: sincronizeTodos,
-  } = useLocalStorage("TASK_V1", []);
+  } = useLocalStorage("TASK_V2", []);
 
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
@@ -34,25 +34,27 @@ function useTodos() {
   //   });//need performance
 
   const addTodo = (text) => {
+    const id = newTodoId(todos);
     const newTodos = [...todos];
     newTodos.push({
       text,
       completed: false,
+      id,
     });
     saveTodos(newTodos);
   };
 
-  const completeTodo = (text) => {
+  const completeTodo = (id) => {
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    const todoIndex = newTodos.findIndex((todo) => todo.id === id);
     // newTodos[todoIndex].completed = true;
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     saveTodos(newTodos);
   };
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (id) => {
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    const todoIndex = newTodos.findIndex((todo) => todo.id === id);
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
@@ -72,6 +74,15 @@ function useTodos() {
         setOpenModal,
         sincronizeTodos,
       };
+}
+
+function newTodoId(todoList) {
+  if (!todoList.length) {
+    return 1;
+  }
+  const idList = todoList.map(todo => todo.id);
+  const idMax = Math.max(...idList);
+  return idMax + 1;
 }
 
 export { useTodos };
