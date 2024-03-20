@@ -40,7 +40,7 @@ function Home() {
     deleteTodo,
     // setOpenModal,
     // openModal,
-    addTodo,
+    // addTodo,
     sincronizeTodos,
   } = useTodos();
 
@@ -80,7 +80,7 @@ function Home() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => completeTodo(todo.id)}
-            onEdit={() => console.log('Editar Todo')}
+            onEdit={() => navigate('/edit/' + todo.id)}
             onDelete={() => deleteTodo(todo.id)}
           />
         )}//render Props

@@ -1,24 +1,34 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 // import { TodoContext } from '../TodoContext';
 import './TodoForm.scss';
 
-function TodoForm({addTodo, setOpenModal}) {
+function TodoForm({
+    submitEvent,
+    label,
+    submitText,
+    // addTodo, 
+    // setOpenModal
+    }) {
 
     // const {
     //     addTodo,
     //     setOpenModal,
     // } = React.useContext(TodoContext);
-
+    const navigate = useNavigate();
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
     const onSubmit = (event)=>{
         event.preventDefault();//evita que se recargue la pagina
-        addTodo(newTodoValue);
-        setOpenModal(false);
+        navigate('/');
+        // addTodo(newTodoValue);
+        submitEvent(newTodoValue);
+        // setOpenModal(false);
     };
 
     const onCancel = ()=>{
-        setOpenModal(false);
+        // setOpenModal(false);
+        navigate('/');
     };
 
     const onChange = (event)=>{
@@ -27,7 +37,7 @@ function TodoForm({addTodo, setOpenModal}) {
     return (
         <form className='TodoForm-Container'
             onSubmit={onSubmit}>
-            <label>Escribe tu nueva Tarea</label>
+            <label>{label}</label>
             <textarea 
                 placeholder='...'
                 value = {newTodoValue}
@@ -46,7 +56,7 @@ function TodoForm({addTodo, setOpenModal}) {
                 <button 
                     type="submit" 
                     className='TodoForm-button TFB--add'>
-                    Agregar
+                    {submitText}
                 </button>
             </div>
         </form>
