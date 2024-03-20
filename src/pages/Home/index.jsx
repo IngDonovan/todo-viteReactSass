@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useTodos } from '@hooks/useTodos';//custom hook
 
@@ -24,6 +25,8 @@ import { ChangeAlert } from '@components/ChangeAlert';
 
 
 function Home() {
+
+  const navigate = useNavigate(); 
 
   const {
     searchValue,
@@ -86,6 +89,7 @@ function Home() {
       </TodoList>
 
       <CreateTodoButton 
+        onClick = {() => navigate('/add')}
         // setOpenModal = {setOpenModal}
       />
 
