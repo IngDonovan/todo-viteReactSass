@@ -35,8 +35,8 @@ function Home() {
     searchedTodos,
     completeTodo,
     deleteTodo,
-    setOpenModal,
-    openModal,
+    // setOpenModal,
+    // openModal,
     addTodo,
     sincronizeTodos,
   } = useTodos();
@@ -86,17 +86,17 @@ function Home() {
       </TodoList>
 
       <CreateTodoButton 
-        setOpenModal = {setOpenModal}
+        // setOpenModal = {setOpenModal}
       />
 
-      {openModal && (
+      {/* {openModal && (
         <Modal>
           <TodoForm 
             addTodo = {addTodo}
             setOpenModal = {setOpenModal}
           />
         </Modal>
-      )}
+      )} */}
 
         <ChangeAlert 
           sincronize= {sincronizeTodos}
