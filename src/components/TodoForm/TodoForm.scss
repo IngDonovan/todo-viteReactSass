@@ -1,15 +1,18 @@
 .TodoForm-Container {
     // width: 90%;
-    // max-width: 300px;
-    padding: 33px 40px;
+    max-width: 300px;
+    height: 80vh;
+    // padding: 33px 40px;
+    padding: 20px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #e0e0e0;;
     border-radius: 16px;
-    box-shadow:  9px 9px 18px #282b30,
-             -9px -9px 18px #363a40;
+    // background-color: #e0e0e0;
+    // box-shadow:  -8px -8px 16px #bebebe,
+    //              8px 8px 16px #ffffff;
 }
 
 .TodoForm-Container label {
@@ -21,16 +24,18 @@
 }
 
 .TodoForm-Container textarea {
-    background-color: #F9FBFC;
-    border: 2px solid #202329;
+    background: #e0e0e0;
+    border: none;
     border-radius: 12px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
     color: #1E1E1F;
     font-size: 20px;
     text-align: center;
     padding: 12px;
     height: 96px;
-    width: calc(100% - 25px);
+    width: 100%;
+    // width: calc(100% - 25px);
+    box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #ffffff;
 }
 
 .TodoForm-Container textarea::placeholder {
@@ -56,7 +61,7 @@
     display: inline-block;
     font-size: 20px;
     font-weight: 400;
-    width: 120px;
+    width: 100px;
     height: 48px;
     border-radius: 7px;
     border: none;
@@ -69,7 +74,9 @@
 
 .TFB--cancel:hover {
     color: white;
-    background: red;
+    background: linear-gradient(145deg, #ff0051, #e60044);
+    // box-shadow:  5px 5px 15px #d90041,
+    //             -5px -5px 15px #ff0057;
 }
 
 /* .TFB--add {
@@ -79,17 +86,24 @@
   
   .TFB--add {
     color: white;
-    background: rgb(0,140,255);
-    box-shadow: 0 0 25px rgb(0,140,255);
+    // background: rgb(0,140,255);
+    // box-shadow: 0 0 25px rgb(0,140,255);
     transition: 0.5s;
     transition-property: box-shadow;
+    background: linear-gradient(145deg, #0096ff, #007ee6);
+    // box-shadow:  20px 20px 60px #0077d9,
+    //             -20px -20px 60px #00a1ff;
   }
   
   .TFB--add:hover {
-    box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+    background: linear-gradient(145deg, #007ee6, #0096ff);
+    box-shadow:  5px 5px 15px #0077d9,
+                -5px -5px 15px #00a1ff;
+
+    // box-shadow: 0 0 5px rgb(0,140,255),
+    //             0 0 25px rgb(0,140,255),
+    //             0 0 50px rgb(0,140,255),
+    //             0 0 100px rgb(0,140,255);
   }
 
   

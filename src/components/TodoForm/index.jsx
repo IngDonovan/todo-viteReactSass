@@ -49,7 +49,6 @@ function TodoForm({
                     type="button" 
                     className='TodoForm-button TFB--cancel'
                     onClick={onCancel}
-                    
                 >
                     Cancelar
                 </button>
