@@ -20,9 +20,9 @@ function TodoForm({
 
     const onSubmit = (event)=>{
         event.preventDefault();//evita que se recargue la pagina
+        submitEvent(newTodoValue);
         navigate('/');
         // addTodo(newTodoValue);
-        submitEvent(newTodoValue);
         // setOpenModal(false);
     };
 
