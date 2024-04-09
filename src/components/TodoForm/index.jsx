@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './TodoForm.scss';
 
 function TodoForm({
+    defaultTodoText,
     submitEvent,
     label,
     submitText,
@@ -16,7 +17,7 @@ function TodoForm({
     //     setOpenModal,
     // } = React.useContext(TodoContext);
     const navigate = useNavigate();
-    const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [newTodoValue, setNewTodoValue] = React.useState(defaultTodoText || '');
 
     const onSubmit = (event)=>{
         event.preventDefault();//evita que se recargue la pagina

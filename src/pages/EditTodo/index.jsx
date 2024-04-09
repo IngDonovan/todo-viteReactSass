@@ -1,16 +1,32 @@
 import React from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useTodos } from "@hooks/useTodos";
 import { TodoForm } from '@components/TodoForm';
 import { TodoHeader } from "@components/TodoHeader";
 import { TodoTitle } from "@components/TodoTitle";
+import { TodosLoading } from "@components/TodosLoading";
 
 function EditTodo() {
+    const location = useLocation();
     const params = useParams();
     const id = Number(params.id);
     const {
+        loading,
+        getTodo,
         editTodo,
       } = useTodos();
+
+      let todoText;
+
+    if (location.state?.todo) {
+        todoText = location.state.todo.text;
+    }else if (loading) {
+        return <TodosLoading />
+    } else{
+        const todo = getTodo(id);
+        todoText = todo.text;
+    }
+
     return (
         <>
             <TodoHeader>
@@ -18,10 +34,11 @@ function EditTodo() {
             </TodoHeader>
             <TodoForm 
                 label='Modifica el TODO'
+                defaultTodoText= {todoText}
                 submitText='Editar'
                 submitEvent={(newText) => editTodo(id, newText)}
             />
-
+    
         </>
     );
 };
