@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 // import { TodoContext } from '../TodoContext';
 import './TodoSearch.scss'
 
@@ -8,15 +9,28 @@ function TodoSearch({loading, searchValue, setSearchValue}) {
   //   searchValue,
   //   setSearchValue 
   // } = React.useContext(TodoContext);
+  const [searchParams, setSearchParams] = useSearchParams();
+  // Función para actualizar el valor de búsqueda en la URL
+  const paramsValue = searchParams.get('search');
+
+  const updateSearchParams = (value) => {
+    setSearchParams({ search: value });
+  };
+  if (paramsValue) {
+    setSearchValue(paramsValue);
+  }
 
   return (
     <div className="cont">
       <section className="cont-box">
         <input
           placeholder="Busca tu tarea"
-          value={searchValue}
+          // value={searchValue}
+          value={paramsValue ?? ''}
           onChange={(event) => {
-            setSearchValue(event.target.value);
+            const value = event.target.value;
+            setSearchValue(value);
+            updateSearchParams(value);
           }}
           disabled={loading}
         />
