@@ -18,7 +18,7 @@ function TodoSearch({loading, searchValue, setSearchValue}) {
   };
   if (paramsValue) {
     setSearchValue(paramsValue);
-  }
+  };
 
   return (
     <div className="cont">

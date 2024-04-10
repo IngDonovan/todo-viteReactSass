@@ -5,6 +5,7 @@ import { TodoForm } from '@components/TodoForm';
 import { TodoHeader } from "@components/TodoHeader";
 import { TodoTitle } from "@components/TodoTitle";
 import { TodosLoading } from "@components/TodosLoading";
+import './EditTodo.scss';
 
 function EditTodo() {
     const location = useLocation();
@@ -21,7 +22,16 @@ function EditTodo() {
     if (location.state?.todo) {
         todoText = location.state.todo.text;
     }else if (loading) {
-        return <TodosLoading />
+        return (
+            <>
+                <TodoHeader>
+                    <TodoTitle />
+                </TodoHeader>
+                <div className="contLoading">
+                    <TodosLoading />    
+                </div>
+            </>
+        )
     } else{
         const todo = getTodo(id);
         todoText = todo.text;
@@ -38,7 +48,6 @@ function EditTodo() {
                 submitText='Editar'
                 submitEvent={(newText) => editTodo(id, newText)}
             />
-    
         </>
     );
 };
